@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   return (
@@ -16,12 +17,12 @@ export default function LandingPage() {
       {/* Navbar */}
       <nav className="flex justify-between items-center px-10 py-4 shadow-sm">
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-red-500 rounded-full"></div>
+          <div className="w-8 h-8 bg-indigo-600 rounded-full"></div>
           <h1 className="font-bold text-lg">DROU</h1>
         </div>
 
         <ul className="flex space-x-6 font-medium">
-          <li className="text-red-500 cursor-pointer">Home</li>
+          <li className="text-indigo-600 cursor-pointer">Home</li>
           <li className="cursor-pointer">Electronics</li>
           <li className="cursor-pointer">Blog</li>
           <li className="cursor-pointer">Pages</li>
@@ -39,7 +40,7 @@ export default function LandingPage() {
       <section className="flex flex-col md:flex-row items-center justify-between px-10 py-16 bg-gray-50">
         {/* Left Content */}
         <div className="max-w-lg">
-          <p className="text-red-500 font-semibold mb-2">
+          <p className="text-indigo-600 font-semibold mb-2">
             SALE UP TO 30% OFF
           </p>
           <h2 className="text-4xl font-bold mb-4">
@@ -50,9 +51,11 @@ export default function LandingPage() {
             to monitor your fitness
           </p>
 
-          <button className="bg-red-500 text-white px-6 py-3 rounded-full hover:bg-red-600 transition">
-            Shop Now →
-          </button>
+          <Link to="/shop">
+            <button className="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition cursor-pointer">
+              Shop Now →
+            </button>
+          </Link>
         </div>
 
         {/* Right Image */}

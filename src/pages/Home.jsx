@@ -9,7 +9,7 @@ const Home = () => {
   const { addToCart } = useContext(CartContext);
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="p-4 grid grid-cols-3 gap-4">
       {products.map(product => (
         <ProductCard 
           key={product.id} 

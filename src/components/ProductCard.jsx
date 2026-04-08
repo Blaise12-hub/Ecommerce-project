@@ -12,7 +12,7 @@ export default function ProductCard({ product }) {
 
       <button
         onClick={() => addToCart(product)}
-        className="bg-black text-white px-4 py-2 mt-2 rounded"
+        className="bg-indigo-600 text-white px-4 py-2 mt-2 rounded hover:bg-indigo-700 transition"
       >
         Add to Cart
       </button>
