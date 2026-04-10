@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@mui/material";
 
 export default function ProductCard({ product, addToCart }) {
   return (
@@ -23,12 +24,26 @@ export default function ProductCard({ product, addToCart }) {
         </h2>
         <div className="flex items-center justify-between pt-2">
           <p className="text-[#eb3e32] font-black text-xl tracking-tighter">${product.price}</p>
-          <button
+          <Button
+            variant="contained"
+            color="secondary"
             onClick={() => addToCart(product)}
-            className="bg-gray-900 text-white p-3 px-6 rounded-xl text-xs font-black uppercase tracking-widest hover:bg-[#eb3e32] transition-all duration-300 shadow-md active:scale-90"
+            sx={{
+              backgroundColor: '#111827',
+              color: '#fff',
+              fontSize: '10px',
+              fontWeight: 900,
+              letterSpacing: '0.1em',
+              px: 3,
+              py: 1.2,
+              borderRadius: '12px',
+              '&:hover': {
+                backgroundColor: '#eb3e32',
+              },
+            }}
           >
             Add
-          </button>
+          </Button>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ const products = [
     name: "Apple Watch Series",
     price: 399,
     category: "Accessories",
-    image: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/watch-card-40-alum-midnight-s7?wid=680&hei=528&fmt=png-alpha&.v=1632171066000",
+    image: "https://images.unsplash.com/photo-1544117518-30df578096a4?q=80&w=600&auto=format&fit=crop",
   },
   {
     id: 2,

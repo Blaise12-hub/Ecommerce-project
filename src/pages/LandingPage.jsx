@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 export default function LandingPage() {
   return (
@@ -19,11 +20,21 @@ export default function LandingPage() {
             to monitor your fitness
           </p>
 
-          <Link to="/shop">
-            <button className="bg-[#eb3e32] text-white px-6 py-3 rounded-full hover:bg-[#d1352a] transition cursor-pointer">
-              Shop Now →
-            </button>
-          </Link>
+          <Button
+            component={Link}
+            to="/shop"
+            variant="contained"
+            color="primary"
+            sx={{
+              px: 4,
+              py: 1.5,
+              borderRadius: '9999px',
+              fontSize: '14px',
+              fontWeight: 700,
+            }}
+          >
+            Shop Now →
+          </Button>
         </div>
 
         {/* Right Image */}
@@ -63,7 +74,20 @@ export default function LandingPage() {
             <div>
               <p className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">Security Smart Camera</p>
               <h3 className="text-2xl font-bold mb-4">Just Starting at $850</h3>
-              <button className="bg-[#eb3e32] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#d1352a] transition">Shop Now</button>
+              <Button
+                component={Link}
+                to="/shop"
+                variant="contained"
+                color="primary"
+                size="small"
+                sx={{
+                  borderRadius: '9999px',
+                  fontWeight: 600,
+                  textTransform: 'none',
+                }}
+              >
+                Shop Now
+              </Button>
             </div>
             <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=200&auto=format&fit=crop" alt="Camera" className="w-32 h-32 object-cover rounded-lg" />
           </div>
@@ -72,7 +96,20 @@ export default function LandingPage() {
             <div>
               <p className="text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">Entertainment & Games</p>
               <h3 className="text-2xl font-bold mb-4">Just Starting at $450</h3>
-              <button className="bg-[#eb3e32] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#d1352a] transition">Shop Now</button>
+              <Button
+                component={Link}
+                to="/shop"
+                variant="contained"
+                color="primary"
+                size="small"
+                sx={{
+                  borderRadius: '9999px',
+                  fontWeight: 600,
+                  textTransform: 'none',
+                }}
+              >
+                Shop Now
+              </Button>
             </div>
             <img src="https://images.unsplash.com/photo-1605901309584-818e25960a8f?q=80&w=200&auto=format&fit=crop" alt="Controller" className="w-32 h-32 object-cover rounded-lg" />
           </div>

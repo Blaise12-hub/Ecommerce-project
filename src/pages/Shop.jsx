@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import products from "../data/products";
 import ProductCard from "../components/ProductCard";
 import { useCart } from "../context/useCart";
+import { Slider } from "@mui/material";
 
 const Shop = () => {
   const { addToCart } = useCart();
@@ -75,14 +76,20 @@ const Shop = () => {
                 <h3 className="font-black text-xl text-gray-900 border-b-2 border-[#eb3e32] inline-block pr-4">Price</h3>
                 <span className="text-[#eb3e32] font-black">${priceRange}</span>
               </div>
-              <input
-                type="range"
-                min="0"
-                max="2000"
-                step="50"
+              <Slider
                 value={priceRange}
-                onChange={(e) => setPriceRange(Number(e.target.value))}
-                className="w-full h-2 bg-gray-100 rounded-lg appearance-none cursor-pointer accent-[#eb3e32]"
+                min={0}
+                max={2000}
+                step={50}
+                onChange={(e, newValue) => setPriceRange(newValue)}
+                valueLabelDisplay="auto"
+                sx={{
+                  color: '#eb3e32',
+                  '& .MuiSlider-thumb': {
+                    backgroundColor: '#fff',
+                    border: '2px solid currentColor',
+                  },
+                }}
               />
               <div className="flex justify-between text-[10px] text-gray-400 font-bold mt-2 uppercase tracking-tighter">
                 <span>$0</span>
